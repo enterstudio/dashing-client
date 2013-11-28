@@ -22,8 +22,7 @@ class DashingClient
     #
     send: (widgetId, data) ->
         data = lodash.extend {}, data, {auth_token: @apiKey}
-        rest.postJson "#{@dashingBaseUri}/widgets/#{widgetId}", data, @options
-        return null
+        return rest.postJson "#{@dashingBaseUri}/widgets/#{widgetId}", data, @options
 
     toString: () ->
         return "DashingClient for #{@dashingBaseUri}"

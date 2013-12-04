@@ -25,12 +25,16 @@ You can send data using DashingClient from your node.js program:
     DashingClient = require('dashing-client');
 
     dashing = new DashingClient("http://localhost:3030", "YOUR_AUTH_TOKEN");
-    dashing.send("welcome", {text: "Hey, look what I can do!"});
+    dashing.send("welcome", {text: "Hey, look what I can do!"}, function(err, resp, body) {
+        // Do callback stuff
+    });
 
 Note that you can also pass authentication credentials for basic_auth:
 
-    dashing.send("welcome", {text: "Hey, look what I can do!"},
-      {username: "user", password: "secret"});
+    DashingClient = require('dashing-client');
+
+    dashing = new DashingClient("http://localhost:3030", "YOUR_AUTH_TOKEN",
+      {auth: {user: "user", pass: "secret"}});
 
 
 Installation

@@ -1,5 +1,5 @@
-rest            = require 'restler'
 lodash          = require 'lodash'
+request         = require 'request'
 
 class DashingClient
     # Create a new DashingClient
@@ -20,9 +20,10 @@ class DashingClient
     #
     # e.g.: `send('welcome', {text: "Hey, look what I can do!"})`
     #
-    send: (widgetId, data) ->
-        data = lodash.extend {}, data, {auth_token: @apiKey}
-        return rest.postJson "#{@dashingBaseUri}/widgets/#{widgetId}", data, @options
+    send: (widgetId, data, done) ->
+        data    = lodash.extend {}, data, {auth_token: @apiKey}
+        options = lodash.extend {json: data}, @options
+        request.post "#{@dashingBaseUri}/widgets/#{widgetId}", options, done
 
     toString: () ->
         return "DashingClient for #{@dashingBaseUri}"

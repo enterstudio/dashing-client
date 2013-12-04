@@ -2,7 +2,7 @@
   "name":              "dashing-client",
   "description":       "Send stats to Dashing from node.js.",
   "keywords":          ["dashing", "dashboard"],
-  "version":           "0.0.3",
+  "version":           "0.0.4",
   "author":            "Benbria (http://www.benbria.com/)",
   "contributors": [
       "Jason Walton <dev@lucid.thedreaming.org> (https://github.com/jwalton)"
@@ -16,7 +16,7 @@
     "lib":             "./lib"
   },
   "dependencies": {
-    "restler": "2.0.1"
+    "request": "2.28.0"
   },
   "devDependencies": {
     "coffee-script":   ">=1.5.0"

@@ -15,6 +15,10 @@
   "directories" : {
     "lib":             "./lib"
   },
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/benbria/dashing-client.git"
+  },
   "dependencies": {
     "request": "2.28.0"
   },

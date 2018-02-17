@@ -1,31 +1,36 @@
 {
-  "name":              "dashing-client",
-  "description":       "Send stats to Dashing from node.js.",
-  "keywords":          ["dashing", "dashboard"],
-  "version":           "0.0.5",
-  "author":            "Benbria (http://www.benbria.com/)",
-  "contributors": [
-      "Jason Walton <dev@lucid.thedreaming.org> (https://github.com/jwalton)"
+  "name": "dashing-client",
+  "description": "Send stats to Dashing from node.js.",
+  "keywords": [
+    "dashing",
+    "dashboard"
   ],
-  "licenses": [{
-    "type":            "MIT",
-    "url":             "https://raw.github.com/benbria/dashing-client/master/LICENSE"
-  }],
-  "main":              "./lib/dashingClient.js",
-  "directories" : {
-    "lib":             "./lib"
+  "version": "0.0.5",
+  "author": "Benbria (http://www.benbria.com/)",
+  "contributors": [
+    "Jason Walton <dev@lucid.thedreaming.org> (https://github.com/jwalton)"
+  ],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://raw.github.com/benbria/dashing-client/master/LICENSE"
+    }
+  ],
+  "main": "./lib/dashingClient.js",
+  "directories": {
+    "lib": "./lib"
   },
-  "repository" : {
-    "type" : "git",
-    "url" : "https://github.com/benbria/dashing-client.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/benbria/dashing-client.git"
   },
   "dependencies": {
-    "request": "~2.33.0"
+    "request": "~2.82.0"
   },
   "devDependencies": {
-    "coffee-script":   ">=1.5.0"
+    "coffee-script": ">=1.5.0"
   },
   "engines": {
-    "node":            ">=0.6.19"
+    "node": ">=0.6.19"
   }
 }
